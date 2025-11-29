@@ -8,6 +8,8 @@ import { Room } from '../types';
 
 const Rooms: React.FC = () => {
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
+  const batianRooms = ROOMS.filter(r => r.category === 'Batian Wing');
+  const lenanaRooms = ROOMS.filter(r => r.category === 'Lenana Wing');
 
   const handleBookRoom = () => {
     setSelectedRoom(null);
@@ -17,6 +19,56 @@ const Rooms: React.FC = () => {
     }
   };
 
+  const RoomCard = ({ room }: { room: Room }) => (
+    <div 
+      className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col h-full cursor-pointer"
+      onClick={() => setSelectedRoom(room)}
+    >
+      <div className="relative overflow-hidden aspect-[4/3]">
+        <img 
+          src={room.imageUrl} 
+          alt={room.name} 
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-colors duration-500"></div>
+        {room.featured && (
+          <div className="absolute top-4 right-4 bg-gold-500 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm shadow-sm">
+            Featured
+          </div>
+        )}
+      </div>
+      <div className="p-8 flex flex-col flex-grow">
+        <h3 className="font-serif text-xl text-navy-900 mb-2">{room.name}</h3>
+        <p className="text-charcoal-800/80 mb-6 text-sm leading-relaxed flex-grow line-clamp-3">
+          {room.description}
+        </p>
+        <div className="flex items-center gap-6 mb-6 text-sm text-charcoal-800/60 border-y border-gray-100 py-4">
+          <div className="flex items-center gap-2">
+            <User size={16} className="text-gold-500" />
+            <span>{room.guests} Guests</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Maximize size={16} className="text-gold-500" />
+            <span>{room.size}</span>
+          </div>
+        </div>
+        <div className="flex items-center justify-between mt-auto">
+          <div>
+            <span className="font-serif text-xl text-navy-900 font-bold">${room.price}</span>
+            <span className="text-xs text-charcoal-800/60">/night</span>
+          </div>
+          <Button variant="primary" size="sm" onClick={(e) => {
+            e.stopPropagation();
+            setSelectedRoom(room);
+          }}>
+            Details
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <section id="rooms" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,85 +76,42 @@ const Rooms: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-gold-600 font-semibold tracking-widest uppercase text-sm mb-2 block">Accommodations</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-navy-900 mb-6">Suites & Rooms</h2>
+          <h2 className="font-serif text-4xl md:text-5xl text-navy-900 mb-6">Rooms & Suites</h2>
           <p className="text-charcoal-800 text-lg font-light">
-            Each of our rooms is a sanctuary of peace, featuring bespoke furniture, premium linens, and breathtaking views.
+            Choose between the modern luxury of our Batian Wing or the vintage elegance of the Lenana Wing.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {ROOMS.map((room, index) => (
+        {/* Batian Wing */}
+        <Reveal>
+          <div className="mb-8 flex items-center gap-4">
+            <h3 className="text-3xl font-serif text-navy-900">Batian Wing</h3>
+            <div className="h-px bg-gray-200 flex-grow"></div>
+            <span className="text-sm uppercase tracking-widest text-gold-600 font-medium">Modern & Luxurious</span>
+          </div>
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+          {batianRooms.map((room, index) => (
             <Reveal key={room.id} delay={index * 100}>
-              <div 
-                className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col h-full cursor-pointer"
-                onClick={() => setSelectedRoom(room)}
-              >
-                
-                {/* Image Container */}
-                <div className="relative overflow-hidden aspect-[4/3]">
-                  <img 
-                    src={room.imageUrl} 
-                    alt={room.name} 
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-colors duration-500"></div>
-                  {room.featured && (
-                    <div className="absolute top-4 right-4 bg-gold-500 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm shadow-sm">
-                      Featured
-                    </div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="font-serif text-2xl text-navy-900">{room.name}</h3>
-                  </div>
-                  
-                  <p className="text-charcoal-800/80 mb-6 text-sm leading-relaxed flex-grow">
-                    {room.description}
-                  </p>
-
-                  {/* Meta */}
-                  <div className="flex items-center gap-6 mb-6 text-sm text-charcoal-800/60 border-y border-gray-100 py-4">
-                    <div className="flex items-center gap-2">
-                      <User size={16} className="text-gold-500" />
-                      <span>Up to {room.guests} Guests</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Maximize size={16} className="text-gold-500" />
-                      <span>{room.size}</span>
-                    </div>
-                  </div>
-
-                  {/* Price & CTA */}
-                  <div className="flex items-center justify-between mt-auto">
-                    <div>
-                      <span className="block text-xs text-charcoal-800/60 uppercase">Starting from</span>
-                      <span className="font-serif text-2xl text-navy-900 font-bold">${room.price}</span>
-                      <span className="text-xs text-charcoal-800/60">/night</span>
-                    </div>
-                    <Button 
-                      variant="primary" 
-                      size="sm" 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedRoom(room);
-                      }}
-                    >
-                      View Details
-                    </Button>
-                  </div>
-                </div>
-              </div>
+              <RoomCard room={room} />
             </Reveal>
           ))}
         </div>
-        
-        <div className="mt-16 text-center">
-          <Button variant="outline" size="lg" onClick={() => setSelectedRoom(ROOMS[0])}>View All Accommodations</Button>
+
+        {/* Lenana Wing */}
+        <Reveal>
+          <div className="mb-8 flex items-center gap-4">
+            <h3 className="text-3xl font-serif text-navy-900">Lenana Wing</h3>
+            <div className="h-px bg-gray-200 flex-grow"></div>
+            <span className="text-sm uppercase tracking-widest text-gold-600 font-medium">Vintage Elegance</span>
+          </div>
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {lenanaRooms.map((room, index) => (
+            <Reveal key={room.id} delay={index * 100}>
+              <RoomCard room={room} />
+            </Reveal>
+          ))}
         </div>
 
       </div>
@@ -121,6 +130,7 @@ const Rooms: React.FC = () => {
             
             <div className="flex justify-between items-end">
               <div>
+                <span className="text-gold-600 uppercase text-xs tracking-widest font-bold mb-1 block">{selectedRoom.category}</span>
                 <h4 className="font-serif text-2xl text-navy-900 mb-2">{selectedRoom.name}</h4>
                  <div className="flex items-center gap-4 text-sm text-gray-500">
                     <span className="flex items-center gap-1"><User size={14}/> {selectedRoom.guests} Guests</span>
@@ -134,7 +144,7 @@ const Rooms: React.FC = () => {
             </div>
 
             <p className="text-gray-600 leading-relaxed">
-              {selectedRoom.description} This suite offers an unparalleled experience in comfort and style. Perfect for those seeking a luxurious getaway with top-tier amenities.
+              {selectedRoom.description}
             </p>
 
             <div className="bg-cream-50 p-6 rounded-lg border border-gold-100">
@@ -146,10 +156,8 @@ const Rooms: React.FC = () => {
                     <span>{amenity}</span>
                   </div>
                 ))}
-                <div className="flex items-center gap-2 text-charcoal-800"><Wifi size={16} className="text-gold-500" /><span>Free High-Speed Wi-Fi</span></div>
-                <div className="flex items-center gap-2 text-charcoal-800"><Tv size={16} className="text-gold-500" /><span>55" Smart TV</span></div>
-                <div className="flex items-center gap-2 text-charcoal-800"><Wind size={16} className="text-gold-500" /><span>Climate Control</span></div>
-                <div className="flex items-center gap-2 text-charcoal-800"><Coffee size={16} className="text-gold-500" /><span>Espresso Machine</span></div>
+                <div className="flex items-center gap-2 text-charcoal-800"><Wifi size={16} className="text-gold-500" /><span>Free Wi-Fi</span></div>
+                <div className="flex items-center gap-2 text-charcoal-800"><Tv size={16} className="text-gold-500" /><span>Smart TV</span></div>
               </div>
             </div>
 

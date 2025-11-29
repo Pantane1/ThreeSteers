@@ -4,7 +4,9 @@ import Hero from './components/Hero';
 import BookingWidget from './components/BookingWidget';
 import About from './components/About';
 import Rooms from './components/Rooms';
-import Amenities from './components/Amenities';
+import Dining from './components/Dining';
+import Events from './components/Events';
+import Blogs from './components/Blogs';
 import Gallery from './components/Gallery';
 import Location from './components/Location';
 import Testimonials from './components/Testimonials';
@@ -20,10 +22,12 @@ const App: React.FC = () => {
         <BookingWidget />
         <About />
         <Rooms />
-        <Amenities />
-        <Gallery />
+        <Dining />
+        <Events />
         <Location />
+        <Gallery />
         <Testimonials />
+        <Blogs />
         <Developer />
       </main>
       <Footer />

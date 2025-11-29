@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Button from './ui/Button';
 
 const Footer: React.FC = () => {
@@ -19,63 +19,92 @@ const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-gray-400 font-light leading-relaxed">
-              Experience the art of hospitality in a setting defined by heritage, luxury, and comfort.
+              Located 227KM from Nairobi along the Meru–Nairobi highway. Experience the art of hospitality.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-500 transition-colors">
+              <a 
+                href="https://web.facebook.com/hotelthreesteers?_rdc=1&_rdr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-500 transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-500 transition-colors">
+              <a 
+                href="https://www.instagram.com/threesteershotelmeru/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-500 transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-500 transition-colors">
+              <a 
+                href="https://x.com/Threesteers" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-500 transition-colors"
+                aria-label="X (Twitter)"
+              >
                 <Twitter size={18} />
               </a>
             </div>
           </div>
 
           {/* Contact */}
-          <div className="space-y-6">
+          <div className="space-y-6 col-span-1 md:col-span-2 lg:col-span-2">
             <h3 className="font-serif text-xl text-white">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-gray-400">
-                <MapPin className="text-gold-500 mt-1 flex-shrink-0" size={18} />
-                <span>123 Luxury Avenue,<br/>Metropolis District, 10010</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Phone className="text-gold-500 flex-shrink-0" size={18} />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center gap-3 text-gray-400">
-                <Mail className="text-gold-500 flex-shrink-0" size={18} />
-                <span>concierge@threesteers.com</span>
-              </li>
-            </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-gray-400">
+                  <MapPin className="text-gold-500 mt-1 flex-shrink-0" size={18} />
+                  <span>B6, Meru, Kenya<br/>Meru–Nairobi Highway</span>
+                </li>
+                <li className="flex items-center gap-3 text-gray-400">
+                  <Mail className="text-gold-500 flex-shrink-0" size={18} />
+                  <a href="mailto:reservation@threesteershotel.com" className="hover:text-gold-500 transition-colors">reservation@threesteershotel.com</a>
+                </li>
+              </ul>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-gray-400">
+                  <Phone className="text-gold-500 mt-1 flex-shrink-0" size={18} />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-white text-sm font-semibold">Sales Line:</span>
+                    <a href="tel:+254728588005" className="hover:text-gold-500 transition-colors">+254 728 588 005</a>
+                    <a href="tel:+254735497772" className="hover:text-gold-500 transition-colors">+254 735 497 772</a>
+                    <span className="text-xs italic">(Mon - Fri, 9:00 AM - 5:00 PM)</span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3 text-gray-400">
+                  <Clock className="text-gold-500 mt-1 flex-shrink-0" size={18} />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-white text-sm font-semibold">Front Desk:</span>
+                    <a href="tel:+254728588005" className="hover:text-gold-500 transition-colors">+254 (0) 728 588 005</a>
+                    <span className="text-xs italic">(Mon - Sun, 8:00 AM - 8:00 PM)<br/>24/7 for on-site guests</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Contact Form Link */}
           <div className="space-y-6">
-            <h3 className="font-serif text-xl text-white">Quick Links</h3>
-            <ul className="space-y-3">
-              <li><a href="#about" className="text-gray-400 hover:text-gold-500 transition-colors">About Us</a></li>
-              <li><a href="#rooms" className="text-gray-400 hover:text-gold-500 transition-colors">Accommodations</a></li>
-              <li><a href="#amenities" className="text-gray-400 hover:text-gold-500 transition-colors">Wellness & Spa</a></li>
-              <li><a href="#gallery" className="text-gray-400 hover:text-gold-500 transition-colors">Gallery</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-gold-500 transition-colors">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div className="space-y-6">
-            <h3 className="font-serif text-xl text-white">Newsletter</h3>
-            <p className="text-gray-400 text-sm">Subscribe to receive exclusive offers and seasonal updates.</p>
+            <h3 className="font-serif text-xl text-white">Get in Touch</h3>
+            <p className="text-gray-400 text-sm">Have questions? Send us a message directly.</p>
             <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
               <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="w-full bg-navy-800 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors"
+                type="text" 
+                placeholder="Your Name" 
+                className="w-full bg-navy-800 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors text-sm"
               />
-              <Button variant="primary" size="sm" className="w-full">Subscribe</Button>
+              <input 
+                type="email" 
+                placeholder="Your Email" 
+                className="w-full bg-navy-800 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors text-sm"
+              />
+              <Button variant="primary" size="sm" className="w-full">Send Message</Button>
             </form>
           </div>
 

@@ -1,6 +1,7 @@
 export interface Room {
   id: string;
   name: string;
+  category: 'Batian Wing' | 'Lenana Wing';
   description: string;
   price: number;
   size: string;

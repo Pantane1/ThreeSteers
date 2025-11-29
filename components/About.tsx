@@ -13,19 +13,19 @@ const About: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="h-px w-12 bg-gold-500"></div>
-                <span className="text-gold-600 font-semibold tracking-widest uppercase text-sm">Our Story</span>
+                <span className="text-gold-600 font-semibold tracking-widest uppercase text-sm">Welcome</span>
               </div>
               
               <h2 className="font-serif text-4xl md:text-5xl text-navy-900 leading-tight">
-                A Legacy of <span className="italic font-serif text-gold-600">Excellence</span> & <br/> True Hospitality
+                Your Urban <span className="italic font-serif text-gold-600">Sanctuary</span> in<br/> the Heart of Meru
               </h2>
               
               <p className="text-charcoal-800 text-lg leading-relaxed font-light">
-                Founded in 1965, Three Steers Hotel began as a modest inn and has transformed into the region's premier luxury destination. We pride ourselves on blending the warmth of traditional hospitality with the sophistication of modern amenities.
+                Welcome to the Three Steers Hotel. With two distinct wings—the modern <strong>Batian Wing</strong> and the classically elegant <strong>Lenana Wing</strong>—we offer a perfect stay for every traveler. 
               </p>
               
               <p className="text-charcoal-800 text-lg leading-relaxed font-light">
-                Every corner of our establishment tells a story, from the hand-carved mahogany in our lobby to the locally sourced artwork adorning our suites. We invite you to become part of our history.
+                Indulge in exquisite dining, host memorable events, and embark on enchanting adventures, all from the comfort of our sophisticated haven.
               </p>
 
               <div className="pt-4">
@@ -58,8 +58,8 @@ const About: React.FC = () => {
                 />
                  <div className="bg-navy-900 flex items-center justify-center p-8 text-center rounded-sm shadow-lg">
                     <div className="space-y-2">
-                      <span className="block text-4xl font-serif text-gold-500">50+</span>
-                      <span className="block text-white text-sm uppercase tracking-widest">Years of Service</span>
+                      <span className="block text-4xl font-serif text-gold-500">2</span>
+                      <span className="block text-white text-sm uppercase tracking-widest">Unique Wings</span>
                     </div>
                  </div>
               </div>

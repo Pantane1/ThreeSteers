@@ -20,15 +20,15 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 flex-grow flex items-center justify-center text-center px-4">
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-5xl mx-auto space-y-6">
           <span className="block font-accent text-gold-500 italic text-xl md:text-2xl tracking-wide animate-fade-in-up">
-            Welcome to Paradise
+            Welcome to
           </span>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight leading-tight">
-            Experience <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">Timeless Luxury</span>
+            THREE STEERS <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">HOTEL, MERU</span>
           </h1>
           <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            Where traditional heritage meets modern sophistication. Your escape awaits at the heart of the city.
+            Discover the perfect blend of contemporary luxury and authentic Kenyan hospitality.
           </p>
         </div>
       </div>
