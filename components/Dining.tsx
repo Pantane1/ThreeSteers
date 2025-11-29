@@ -5,7 +5,7 @@ import { Utensils, Coffee } from 'lucide-react';
 const Dining: React.FC = () => {
   return (
     <section id="dining" className="py-24 bg-navy-900 text-white relative">
-      <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'url(https://picsum.photos/id/292/1920/1080)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+      <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1920)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-16">
@@ -26,7 +26,7 @@ const Dining: React.FC = () => {
               <p className="text-gray-300 leading-relaxed mb-6">
                 Indulge in a symphony of flavours at the Aberdares Restaurant. Let your foodie dreams come alive in a tantalizing culinary extravaganza. Our skilled chefs orchestrate a feast of mouthwatering delights, meticulously curated just for you.
               </p>
-              <img src="https://picsum.photos/id/429/600/400" alt="Aberdares Restaurant" className="w-full h-48 object-cover rounded-sm shadow-md opacity-80" />
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=600" alt="Aberdares Restaurant" className="w-full h-48 object-cover rounded-sm shadow-md opacity-90" />
             </div>
           </Reveal>
 
@@ -42,7 +42,7 @@ const Dining: React.FC = () => {
               <p className="text-gray-300 leading-relaxed mb-6">
                 Unwind, connect, and let your spirit soar in the Master's Lounge. The perfect setting to relax after a long day or to meet with friends and colleagues.
               </p>
-              <img src="https://picsum.photos/id/431/600/400" alt="Master's Lounge" className="w-full h-48 object-cover rounded-sm shadow-md opacity-80" />
+              <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&q=80&w=600" alt="Master's Lounge" className="w-full h-48 object-cover rounded-sm shadow-md opacity-90" />
             </div>
           </Reveal>
         </div>

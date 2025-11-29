@@ -4,8 +4,19 @@ import Button from './ui/Button';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-navy-950 text-white pt-24 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer id="contact" className="relative bg-navy-950 text-white pt-24 pb-8 overflow-hidden">
+      
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=1920" 
+          alt="Hotel Night View" 
+          className="w-full h-full object-cover opacity-10 blur-[2px]"
+        />
+        <div className="absolute inset-0 bg-navy-950/90 mix-blend-multiply"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           {/* Brand */}
@@ -97,12 +108,12 @@ const Footer: React.FC = () => {
               <input 
                 type="text" 
                 placeholder="Your Name" 
-                className="w-full bg-navy-800 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors text-sm"
+                className="w-full bg-navy-800/80 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors text-sm"
               />
               <input 
                 type="email" 
                 placeholder="Your Email" 
-                className="w-full bg-navy-800 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors text-sm"
+                className="w-full bg-navy-800/80 border border-navy-700 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors text-sm"
               />
               <Button variant="primary" size="sm" className="w-full">Send Message</Button>
             </form>
@@ -111,7 +122,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-navy-800 pt-8 text-center text-sm text-gray-500">
+        <div className="border-t border-navy-800/50 pt-8 text-center text-sm text-gray-500">
           <p className="mb-2">&copy; {new Date().getFullYear()} Three Steers Hotel & Suites. All rights reserved.</p>
           <p className="text-xs text-gray-600">
             Website created by <span className="text-gold-500">Pantane</span> | 

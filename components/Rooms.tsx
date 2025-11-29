@@ -54,9 +54,12 @@ const Rooms: React.FC = () => {
           </div>
         </div>
         <div className="flex items-center justify-between mt-auto">
-          <div>
-            <span className="font-serif text-xl text-navy-900 font-bold">${room.price}</span>
-            <span className="text-xs text-charcoal-800/60">/night</span>
+          <div className="flex flex-col">
+            <div className="flex items-baseline gap-1">
+              <span className="font-serif text-lg text-navy-900 font-bold">KSh {room.priceKsh.toLocaleString()}</span>
+              <span className="text-xs text-charcoal-800/60">/night</span>
+            </div>
+            <span className="text-xs text-charcoal-800/60 font-medium">${room.price} USD</span>
           </div>
           <Button variant="primary" size="sm" onClick={(e) => {
             e.stopPropagation();
@@ -137,8 +140,9 @@ const Rooms: React.FC = () => {
                     <span className="flex items-center gap-1"><Maximize size={14}/> {selectedRoom.size}</span>
                  </div>
               </div>
-              <div className="text-right">
-                <span className="block text-3xl font-serif text-gold-600 font-bold">${selectedRoom.price}</span>
+              <div className="text-right flex flex-col items-end">
+                <span className="block text-3xl font-serif text-gold-600 font-bold">KSh {selectedRoom.priceKsh.toLocaleString()}</span>
+                <span className="text-xl text-gray-500 font-medium">${selectedRoom.price} USD</span>
                 <span className="text-sm text-gray-400">/ night</span>
               </div>
             </div>
@@ -149,15 +153,13 @@ const Rooms: React.FC = () => {
 
             <div className="bg-cream-50 p-6 rounded-lg border border-gold-100">
               <h5 className="font-semibold text-navy-900 mb-4 uppercase tracking-wider text-sm">Room Amenities</h5>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                 {selectedRoom.amenities.map((amenity, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-charcoal-800">
-                    <Check size={16} className="text-gold-500" />
+                  <div key={idx} className="flex items-start gap-2 text-charcoal-800 text-sm">
+                    <Check size={16} className="text-gold-500 flex-shrink-0 mt-0.5" />
                     <span>{amenity}</span>
                   </div>
                 ))}
-                <div className="flex items-center gap-2 text-charcoal-800"><Wifi size={16} className="text-gold-500" /><span>Free Wi-Fi</span></div>
-                <div className="flex items-center gap-2 text-charcoal-800"><Tv size={16} className="text-gold-500" /><span>Smart TV</span></div>
               </div>
             </div>
 

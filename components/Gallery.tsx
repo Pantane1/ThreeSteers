@@ -6,11 +6,11 @@ const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
 
   const images = [
-    { src: 'https://picsum.photos/id/405/600/800', alt: 'Lobby', span: 'row-span-2' },
-    { src: 'https://picsum.photos/id/433/600/400', alt: 'Pool', span: 'row-span-1' },
-    { src: 'https://picsum.photos/id/292/600/400', alt: 'Food', span: 'row-span-1' },
-    { src: 'https://picsum.photos/id/352/600/800', alt: 'Room Detail', span: 'row-span-2' },
-    { src: 'https://picsum.photos/id/450/600/400', alt: 'Exterior', span: 'row-span-1' },
+    { src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800&h=1200', alt: 'Hotel Exterior & Pool', span: 'row-span-2' },
+    { src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600&h=400', alt: 'Restaurant Interior', span: 'row-span-1' },
+    { src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=600&h=400', alt: 'Conference Hall', span: 'row-span-1' },
+    { src: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=600&h=800', alt: 'Executive Suite Detail', span: 'row-span-2' },
+    { src: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=600&h=400', alt: 'Relaxing Gardens', span: 'row-span-1' },
   ];
 
   return (

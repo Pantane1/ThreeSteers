@@ -4,6 +4,7 @@ export interface Room {
   category: 'Batian Wing' | 'Lenana Wing';
   description: string;
   price: number;
+  priceKsh: number;
   size: string;
   guests: number;
   amenities: string[];

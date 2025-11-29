@@ -17,7 +17,7 @@ const Events: React.FC = () => {
           <Reveal>
             <div className="flex flex-col h-full bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
               <div className="h-64 overflow-hidden">
-                <img src="https://picsum.photos/id/1/800/400" alt="Summit Hall" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=800" alt="Summit Hall" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
               </div>
               <div className="p-8 flex-grow">
                 <div className="flex items-center gap-3 mb-4">
@@ -35,7 +35,7 @@ const Events: React.FC = () => {
           <Reveal delay={200}>
              <div className="flex flex-col h-full bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
               <div className="h-64 overflow-hidden">
-                <img src="https://picsum.photos/id/180/800/400" alt="Conference Room 2" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=800" alt="Conference Room 2" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
               </div>
               <div className="p-8 flex-grow">
                 <div className="flex items-center gap-3 mb-4">

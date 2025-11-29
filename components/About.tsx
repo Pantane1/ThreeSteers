@@ -42,18 +42,18 @@ const About: React.FC = () => {
               
               <div className="relative z-10 grid grid-cols-2 gap-4">
                 <img 
-                  src="https://picsum.photos/id/435/400/500" 
-                  alt="Hotel Architecture" 
+                  src="https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&q=80&w=400" 
+                  alt="Lush Gardens at Three Steers" 
                   className="w-full h-64 object-cover rounded-sm shadow-lg transform translate-y-8"
                 />
                 <img 
-                  src="https://picsum.photos/id/225/400/500" 
-                  alt="Fine Dining" 
+                  src="https://images.unsplash.com/photo-1551632436-cbf8dd354ca8?auto=format&fit=crop&q=80&w=400" 
+                  alt="Fine Dining Service" 
                   className="w-full h-64 object-cover rounded-sm shadow-lg"
                 />
                 <img 
-                  src="https://picsum.photos/id/364/400/500" 
-                  alt="Spa Treatment" 
+                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=400" 
+                  alt="Spa and Wellness" 
                   className="w-full h-64 object-cover rounded-sm shadow-lg transform translate-y-8"
                 />
                  <div className="bg-navy-900 flex items-center justify-center p-8 text-center rounded-sm shadow-lg">
