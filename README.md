@@ -1,4 +1,4 @@
-[ThreeSteers](threesteers.png)
+![ThreeSteers](threesteers.png)
 
 Three Steers Hotel – Modern Website Redesign
 
@@ -86,18 +86,15 @@ Three Steers Hotel, B6, Meru, Kenya
 227KM from Nairobi (approx. 4.5 hours drive)
 
 ⚙️ Installation & Setup
-# Clone the repository
-git clone https://github.com/yourusername/three-steers-hotel.git
+| 
+[git clone](https://github.com/Pantane1/ThreeSteers.git)
 
-# Navigate to the folder
+ Navigate to the folder
 cd three-steers-hotel
-
-# Install dependencies
+Install dependencies
 npm install
-
-# Start development server
+Start development server
 npm run dev
-
 
 The site will run at:
 👉 http://localhost:3000
@@ -124,9 +121,10 @@ package.json
 👨‍💻 Developer
 
 Built with passion by Pantane
-📧 Email: pantane254@gmail.com
+📧 Email: pantane254@gmail.com [email](emailto:pantane254@gmail.com)
 
-📱 WhatsApp: +254 740 312 402
+📱 WhatsApp: +254 740 312 402 [WhatsApp](https://wa.me/254740312402?text=Hi%20Pantane,%20Saw%20your%20website..I)
+
 
 If you'd like a website like this—or better—feel free to reach out.
 
@@ -138,3 +136,8 @@ Open a pull request or issue anytime.
 📜 License
 
 This project is licensed under the MIT License – free for personal and commercial use.
+
+>> **Great_Pantane**
+<p align="center">
+  <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=ACAF50&center=true&vCenter=true&multiline=false&lines=LONG+LIVE+THE+NJAGI'S" alt="">
+</p>
