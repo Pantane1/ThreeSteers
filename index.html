@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-pt-24">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Three Steers Hotel</title>
+    <meta name="description" content="Luxury accommodation with traditional charm." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: '#283593',
+                900: '#1a237e', // Primary Brand Color
+                950: '#0d1245',
+              },
+              gold: {
+                400: '#e6c35c',
+                500: '#d4af37', // Primary Accent
+                600: '#b08d26',
+              },
+              cream: {
+                50: '#fcfbf9',
+                100: '#f8f5f0', // Secondary Background
+                200: '#eee6da',
+              },
+              charcoal: {
+                800: '#424242',
+                900: '#212121',
+              },
+              forest: {
+                700: '#2e7d32',
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Inter"', 'sans-serif'],
+              accent: ['"Lora"', 'serif'],
+            },
+            backgroundImage: {
+              'hero-pattern': "linear-gradient(to bottom, rgba(26, 35, 126, 0.4), rgba(26, 35, 126, 0.6))",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8f5f0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4af37;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b08d26;
+      }
+      
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        will-change: opacity, visibility;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-cream-100 text-charcoal-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
