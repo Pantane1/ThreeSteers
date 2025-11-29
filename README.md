@@ -120,13 +120,11 @@ package.json
 
 👨‍💻 Developer
 
-Built with passion by Pantane
-📧 Email: pantane254@gmail.com [email](emailto:pantane254@gmail.com)
+Built with passion by Pantane:
+[email](emailto:pantane254@gmail.com)
+[WhatsApp](https://wa.me/254740312402?text=Hi%20Pantane,%20Saw%20your%20website..I)
 
-📱 WhatsApp: +254 740 312 402 [WhatsApp](https://wa.me/254740312402?text=Hi%20Pantane,%20Saw%20your%20website..I)
-
-
-If you'd like a website like this—or better—feel free to reach out.
+*If you'd like a website like this—or better—feel free to reach out.*
 
 ⭐ Contributions
 
