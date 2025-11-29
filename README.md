@@ -122,7 +122,8 @@ package.json
 
 Built with passion by Pantane:
 
-[email](emailto:pantane254@gmail.com)
+[Email Me](mailto:pantanemartin@gmail.com?subject=Hello%20Pantane&body=Hi%20Pantane,%20Saw%20your%20website..I)
+
 
 [WhatsApp](https://wa.me/254740312402?text=Hi%20Pantane,%20Saw%20your%20website..I)
 
